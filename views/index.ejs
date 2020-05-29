@@ -1,23 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/css/main.css">
+<%- include('./includes/head.ejs') %>
+<link rel="stylesheet" href="/css/index.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="default.asp">Home</a></li>
-        <li><a href="news.asp">News</a></li>
-        <li><a href="contact.asp">Contact</a></li>
-        <li><a href="about.asp">About</a></li>
-      </ul> 
-    </nav>
-  </header>
-  <h1>Food Track</h1>
-  <p>Um diário alimentar intuitivo feito com Node.js e Express!</p>
-</body>
-</html>
+  <%- include('./includes/navigation.ejs') %>
+
+  <main class="banner">
+    <div class="banner-text bShadow-64">
+      <h1>Food Track</h1>
+      <p>Um diário alimentar simples e inteligente</p>
+      <a class="button" href="/login">Entrar</a>
+      <a class="button" href="/signup">Inscreva-se</a>
+    </div>
+  </main>
+
+  <section class="index-inform">
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <p>Mantenha um registro diário de sua alimentação</p>
+        </div>
+
+        <div class="column">
+          <span class="material-icons">
+            assignment
+          </span>
+        </div>
+
+        <div class="column">
+          <p>Obtenha acompanhamento por um profissional de nutrição</p>
+        </div>
+
+        <div class="column">
+          <span class="material-icons">
+            supervisor_account
+          </span>
+        </div>
+
+        <div class="column">
+          <p>Receba recomendações personalizadas de acordo com suas necessidades</p>
+        </div>
+
+        <div class="column">
+          <span class="material-icons">
+            favorite
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="index-banner">
+      <div class="banner-text-2">
+        <h2>Food Track</h2>
+        <p>Trabalho da disciplina de Projeto Integrador - Unifametro</p>
+      </div>
+    </div>
+  </section>
+
+  <%- include('./includes/end.ejs') %>
+
+
+  <!--  Photo by Taylor Kiser on Unsplash -->

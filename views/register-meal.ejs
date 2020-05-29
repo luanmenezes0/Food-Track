@@ -1,0 +1,41 @@
+<%- include('./includes/head.ejs') %>
+</head>
+
+<body>
+  <%- include('./includes/navigation.ejs') %>
+  
+  <main>
+    <form class="product-form" action="/register-meal" method="post">
+      <div class="title">
+        <h3>O que você gostaria de registrar?</h3>
+      </div>
+      <div class="form-control">
+        <input type="radio" name="meal" id="breakfast" value="breakfast">
+        <label for="breakfast">Café da Manhã</label>
+
+        <input type="radio" name="meal" id="lunch" value="lunch">
+        <label for="lunch">Almoço</label>
+
+        <input type="radio" name="meal" id="snack" value="snack">
+        <label for="snack">Lanches e outros</label>
+
+        <input type="radio" name="meal" id="dinner" value="dinner">
+        <label for="dinner">Jantar</label>
+      </div>
+      <div class="form-control">
+        <label for="date">Data</label>
+        <input type="date" name="date" id="date">
+        <div class="form-control">
+          <label for="time">Hora</label>
+          <input type="time" name="time" id="time">
+        </div>
+        <div class="form-control">
+          <label for="desc">Descrição</label>
+          <textarea class="desc" name="desc" id="desc" rows="4" >
+        </textarea>
+        </div>
+        <button type="submit">Registrar</button>
+    </form>
+  </main>
+
+  <%- include('./includes/end.ejs') %>
