@@ -19,23 +19,10 @@ html {
 
 body {
   color: #54585c;
-  /* font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; */
   font-size: 1.6em;
-  /* font-weight: 300; */
-  /* letter-spacing: .01em; */
   line-height: 1.6;
 }
 
-blockquote {
-  border-left: 0.3rem solid #d1d1d1;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 1rem 1.5rem;
-}
-
-blockquote *:last-child {
-  margin-bottom: 0;
-}
 
 .button,
 button,
@@ -169,34 +156,6 @@ input[type='submit'].button-clear[disabled]:hover {
   color: #f77f00;
 }
 
-code {
-  background: #f4f5f6;
-  border-radius: .4rem;
-  font-size: 86%;
-  margin: 0 .2rem;
-  padding: .2rem .5rem;
-  white-space: nowrap;
-}
-
-pre {
-  background: #f4f5f6;
-  border-left: 0.3rem solid #f77f00;
-  overflow-y: hidden;
-}
-
-pre > code {
-  border-radius: 0;
-  display: block;
-  padding: 1rem 1.5rem;
-  white-space: pre;
-}
-
-hr {
-  border: 0;
-  border-top: 0.1rem solid #f4f5f6;
-  margin: 3.0rem 0;
-}
-
 input[type='email'],
 input[type='number'],
 input[type='password'],
@@ -230,15 +189,6 @@ textarea:focus,
 select:focus {
   border-color: #f77f00;
   outline: 0;
-}
-
-select {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#d1d1d1" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>') center right no-repeat;
-  padding-right: 3.0rem;
-}
-
-select:focus {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#f77f00" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>');
 }
 
 textarea {
@@ -457,26 +407,10 @@ ul {
   padding-left: 0;
 }
 
-/* dl dl,
-dl ol,
-dl ul,
-ol dl,
-ol ol,
-ol ul,
-ul dl,
-ul ol,
-ul ul {
-  font-size: 90%;
-  margin: 1.5rem 0 1.5rem 3.0rem;
-} */
-
 ol {
   list-style: decimal inside;
 }
 
-/* ul {
-  list-style: circle inside;
-} */
 
 .button,
 button,
@@ -496,40 +430,12 @@ textarea {
 blockquote,
 dl,
 figure,
-/* form, */
 ol,
 p,
 pre,
 table,
 ul {
   margin-bottom: 2.5rem;
-}
-
-table {
-  border-spacing: 0;
-  width: 100%;
-}
-
-td,
-th {
-  border-bottom: 0.1rem solid #e1e1e1;
-  padding: 1.2rem 1.5rem;
-  text-align: left;
-}
-
-td:first-child,
-th:first-child {
-  padding-left: 0;
-}
-
-td:last-child,
-th:last-child {
-  padding-right: 0;
-}
-
-b,
-strong {
-  font-weight: bold;
 }
 
 p {

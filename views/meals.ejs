@@ -1,0 +1,24 @@
+<%- include('./includes/head.ejs') %>
+<link rel="stylesheet" href="/css/meals.css">
+</head>
+
+<body>
+  <%- include('includes/navigation.ejs') %>
+  <main>
+    <div>
+      <article class="meal-card bShadow-64">
+        <h3><%= meal.type %> </h3>
+        <p><%= meal.date %> </p>
+        <p><%= meal.time %> </p>
+        <p><%= meal.desc %> </p>
+        <div class="card__actions">
+          <a class="button" href="/edit-meal/<%= meal.id %>?edit=true" class="btn">Editar</a>
+          <form action="/delete-meal" method="POST">
+              <input type="hidden" value="<%= meal.id %>" name="mealId">
+              <button class="btn" type="submit">Deletar</button>
+          </form>
+      </div>
+      </article>
+    </div>
+  </main>
+  <%- include('./includes/end.ejs') %>

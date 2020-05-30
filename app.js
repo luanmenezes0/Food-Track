@@ -48,11 +48,12 @@ app.use((req, res, next) => {
 app.use(router);
 
 app.use(errorController.get404);
-Meal.belongsTo(User);
+
+Meal.belongsTo(User, { constraints: true, onDelete: 'CASCADE' });
 User.hasMany(Meal);
 
 sequelize
-  .sync({})
+  .sync({ })
   .then((result) => {
     app.listen(3000);
   })

@@ -1,0 +1,28 @@
+<%- include('./includes/head.ejs') %>
+<link rel="stylesheet" href="/css/meals.css">
+</head>
+
+<body>
+  <%- include('includes/navigation.ejs') %>
+  <main>
+    <% if (meals.length > 0) { %>
+    <div>
+      <% for (let meal of meals) { %>
+      <article class="meal-card bShadow-64">
+        <h3><%= meal.type %> </h3>
+        <p><%= meal.date %> </p>
+        <p><%= meal.time %> </p>
+        <p><%= meal.desc %> </p>
+        <a class="button" href="/user/meals/<%= meal.id %>">Ver detalhes</a>
+      </article>
+      <% } %>
+    </div>
+    <% } else { %>
+    <div class="error-page">
+      <h1>Seu diário está vazio :(</h1>
+      <p>Registre sua primeira refeição agora!</p>
+      <a class="button" href="/register-meal">Registrar Refeição</a>
+    </div>
+    <% } %>
+  </main>
+  <%- include('./includes/end.ejs') %>

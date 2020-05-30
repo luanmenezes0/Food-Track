@@ -5,36 +5,40 @@
   <%- include('./includes/navigation.ejs') %>
   
   <main>
-    <form class="product-form" action="/register-meal" method="post">
+    <form class="product-form" action="<% if (editing) { %>/edit-meal<% } else { %>/register-meal<% } %>" method="post">
       <div class="title">
         <h3>O que você gostaria de registrar?</h3>
       </div>
       <div class="form-control">
-        <input type="radio" name="meal" id="breakfast" value="breakfast">
+        <input type="radio" name="meal" name="Café da Manhã" id="breakfast" value="<% if (editing) { %> <%= meal.type %> <% } else { %>Café da manhã<% } %>">
         <label for="breakfast">Café da Manhã</label>
 
-        <input type="radio" name="meal" id="lunch" value="lunch">
+        <input type="radio" name="meal" name="Almoço" vid="lunch" value="<% if (editing) { %> <%= meal.type %> <% } else { %>Almoço<% } %>">
         <label for="lunch">Almoço</label>
 
-        <input type="radio" name="meal" id="snack" value="snack">
+        <input type="radio" name="meal" name="Lanche" id="snack" value="<% if (editing) { %> <%= meal.type %> <% } else { %>Lanche<% } %>">
         <label for="snack">Lanches e outros</label>
 
-        <input type="radio" name="meal" id="dinner" value="dinner">
+        <input type="radio" name="meal" name="Jantar" id="dinner" value="<% if (editing) { %> <%= meal.type %> <% } else { %>Jantar1<% } %>">
         <label for="dinner">Jantar</label>
       </div>
       <div class="form-control">
         <label for="date">Data</label>
-        <input type="date" name="date" id="date">
+        <input type="date" name="date" id="date" value="<% if (editing) { %> <%= meal.date %> <% }%>">
         <div class="form-control">
           <label for="time">Hora</label>
-          <input type="time" name="time" id="time">
+          <input type="time" name="time" id="time" value="<% if (editing) { %> <%= meal.time %> <% }%>">
         </div>
         <div class="form-control">
           <label for="desc">Descrição</label>
-          <textarea class="desc" name="desc" id="desc" rows="4" >
+          <textarea class="desc" name="desc" id="desc" rows="4">
+            <% if (editing) { %> <%= meal.desc %> <% }%>
         </textarea>
         </div>
-        <button type="submit">Registrar</button>
+        <% if (editing) { %>
+         <input type="hidden" value="<%= meal.id %> " name="mealId">
+        <% } %>
+        <button type="submit"><% if (editing) { %>Editar Refeição<% } else { %>Registrar Refeição<% } %></button>
     </form>
   </main>
 

@@ -11,7 +11,7 @@ const Meal = sequelize.define('meal', {
   type: Sequelize.STRING,
   date: Sequelize.DATEONLY,
   time: Sequelize.TIME,
-  desc: Sequelize.STRING
+  desc: Sequelize.TEXT
 });
 
 module.exports = Meal;
